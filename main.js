@@ -70,7 +70,9 @@ renderChart();
 function renderChart() {
   const tooltip = document.getElementById("tooltip-container");
 
-  const chartLabels = [], usageCount = []; maxDisplay = 10;
+  const chartLabels = [], usageCount = [];
+  const maxDisplay = (myData.data.length < 10) ? myData.data.length : 10; //If there are more than 10 elements: Only display 10.
+
   for (let i = 0; i < maxDisplay; i++) {
     chartLabels.push(myData.data[i][2]);
     usageCount.push(myData.data[i][0]);
