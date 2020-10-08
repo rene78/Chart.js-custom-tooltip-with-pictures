@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Chart.js Custom Tooltip with pictures</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+  <script src="main.js" type="text/javascript" defer></script>
+</head>
+
+<style>
+  #chart-container {
+    position: relative;
+    /* left: 200px;
+    top: 300px;
+    width: 500px;
+    height: 500px; */
+  }
+
+  #tooltip-container {
+    opacity: 0;
+    position: absolute;
+    pointer-events: none;
+    /*Without this image would disappear when one hovers over it */
+    width: 200px;
+    box-shadow: 2px 5px 5px #888888;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: rgba(255, 255, 255, 0.85);
+  }
+
+  #tooltip-container img {
+    border-radius: 5px 5px 0 0;
+  }
+
+  .tooltip-text {
+    text-align: center;
+  }
+</style>
+
+<body>
+  <div id="chart-container">
+    <canvas id="chart" width="400" height="400"></canvas>
+    <div id="tooltip-container"></div>
+  </div>
+</body>
+
+</html>
